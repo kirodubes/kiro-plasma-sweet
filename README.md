@@ -19,8 +19,8 @@ Themes → Sweet**, which pulls in every layer at once:
 | Window decorations | `/usr/share/aurorae/themes/Sweet`, `Sweet-transparent` | Aurorae titlebars |
 | Color scheme | `/usr/share/color-schemes/Sweet.colors` | application colours |
 | Kvantum theme | `/usr/share/Kvantum/Sweet`, `Sweet-transparent-toolbar` | Qt app styling |
-| Kvantum default selection | `/etc/skel/.config/Kvantum/kvantum.kvconfig` | new users get Sweet Kvantum automatically |
 | SDDM login theme | `/usr/share/sddm/themes/Sweet` | the login screen |
+| Default appearance | `/etc/xdg/kdeglobals`, `/etc/xdg/kwinrc` | new users boot into the Sweet colour scheme + Aurorae decoration without applying it manually |
 
 **Icons are ours.** The global theme's defaults set the icon theme to
 **`neo-candy-icons`** (shipped by `neo-candy-icons-git`), not upstream `candy-icons`.
