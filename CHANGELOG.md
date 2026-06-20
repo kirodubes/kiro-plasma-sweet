@@ -10,6 +10,9 @@
 - Kept it **theme-only**: just the colour scheme, look-and-feel selection, titlebar
   contrast, WM colours, and the Aurorae decoration — no behavioural settings, no
   session-generated panel/applet layout.
+- Default layout for new users: **toolbar (panel) at the top and minimal** (fit-content
+  width, not full-width), with Krystian Zajdel's **Waterfall** as the default wallpaper.
+  Confirmed working on a live apply.
 
 ### Technical Details
 - Delivered under `/etc/xdg` (the system-default layer) rather than `/etc/skel`, so it
@@ -23,10 +26,17 @@
   confirming the captured state is stock Sweet, not a local tweak.
 - Build recipe PKGBUILD now copies `etc/` alongside `usr/` (the `etc/` copy line had been
   removed when the old Kvantum skel file was dropped).
+- Panel/wallpaper defaults live in the Sweet look-and-feel layout script
+  (`org.kde.plasma.desktop-layout.js`), not in the session-renumbered `appletsrc` — so
+  they apply on a fresh layout / when Sweet is applied, without freezing machine-specific
+  applet IDs. Panel: `location = "top"`, `lengthMode = "fit"`. Wallpaper references the
+  breeze-owned KPackage `/usr/share/wallpapers/Next/` (auto-picks resolution + dark
+  variant), so nothing is bundled.
 
 ### Files Modified
 - `etc/xdg/kdeglobals` (new)
 - `etc/xdg/kwinrc` (new)
+- `usr/share/plasma/look-and-feel/Sweet/contents/layouts/org.kde.plasma.desktop-layout.js` — panel to top + fit-content, Waterfall default wallpaper
 - `README.md` — replaced the stale `/etc/skel` Kvantum row with the `/etc/xdg` default-appearance row
 - `CLAUDE.md` — documented the `/etc/xdg` defaults and the Kvantum move to `kiro-dot-files`
 - `../KIRO-PKG-BUILD-APPS/kiro-plasma-sweet/PKGBUILD` — restore `etc/` copy in `package()`
