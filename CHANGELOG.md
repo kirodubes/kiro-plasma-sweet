@@ -1,9 +1,17 @@
 # Changelog
 
+## 2026.06.20 — renamed kiro-sweet → kiro-plasma-sweet
+
+### What Changed
+- Renamed the package `kiro-sweet` → **kiro-plasma-sweet** to follow the ecosystem
+  naming rule: the DE/TWM goes right after `kiro-` so packages cluster per environment
+  (`kiro-plasma-*`). PKGBUILD `replaces=('kiro-sweet')` for a clean upgrade; GitHub repo,
+  recipe dir, source dir, flow (`flow-kiro-plasma-sweet`), and ECOSYSTEM entry all renamed.
+
 ## 2026.06.20 — initial package
 
 ### What Changed
-- New repo: **kiro-sweet**, a combined **Sweet** Plasma global theme for the Kiro
+- New repo: **kiro-plasma-sweet**, a combined **Sweet** Plasma global theme for the Kiro
   Plasma edition. Sweet is the #1 most-downloaded and top-rated global theme on the
   KDE Store — packaged here as a single Global Theme with Kiro's own icons.
 - Combined the KDE/Plasma, Kvantum, and SDDM layers from one upstream into a single
@@ -26,7 +34,7 @@
 - Source: [Gigas002/Sweet-kde](https://github.com/Gigas002/Sweet-kde) `plasma-6-migration`
   branch — a Plasma-6 consolidation of [EliverLara/Sweet](https://github.com/EliverLara/Sweet).
 - License: **CC BY-SA 4.0** (upstream `LICENSE/` carried into the package).
-- Recipe at `~/KIRO-PKG-BUILD-APPS/kiro-sweet` copies `usr/` verbatim; depends on
+- Recipe at `~/KIRO-PKG-BUILD-APPS/kiro-plasma-sweet` copies `usr/` verbatim; depends on
   `neo-candy-icons-git`, `kvantum`, `sddm`.
 
 ### Files Modified

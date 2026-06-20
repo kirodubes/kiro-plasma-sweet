@@ -2,7 +2,7 @@
   <img src="kiro.jpg" alt="Kiro" width="220" />
 </p>
 
-# kiro-sweet
+# kiro-plasma-sweet
 
 Kiro's all-in-one **Sweet** Plasma global theme — the dark, neon-accented look that
 tops the KDE Store popularity charts, repackaged for Kiro with **our own icons**.
@@ -29,7 +29,7 @@ Cursors fall back to `breeze_cursors` (Sweet cursors are not bundled).
 ## Install
 
 ```bash
-sudo pacman -S kiro-sweet
+sudo pacman -S kiro-plasma-sweet
 ```
 
 Then open **System Settings → Appearance → Global Themes** and apply **Sweet**.

@@ -1,4 +1,4 @@
-# kiro-sweet — Project Claude Instructions
+# kiro-plasma-sweet — Project Claude Instructions
 
 ## Overview
 Combined **Sweet** Plasma global theme for the Kiro Plasma edition. One package that
@@ -7,8 +7,8 @@ Kvantum, SDDM) so a user picks **Sweet** once in System Settings and gets the wh
 look — but wired to **Kiro's own `neo-candy-icons`**, not upstream candy-icons.
 
 ## Current state
-- Source repo: `~/KIRO/kiro-sweet` (payload under `usr/share/`).
-- Build recipe: `~/KIRO-PKG-BUILD-APPS/kiro-sweet` (copies `usr/`, GitHub `git+` source).
+- Source repo: `~/KIRO/kiro-plasma-sweet` (payload under `usr/share/`).
+- Build recipe: `~/KIRO-PKG-BUILD-APPS/kiro-plasma-sweet` (copies `usr/`, GitHub `git+` source).
 - Upstream: [Gigas002/Sweet-kde](https://github.com/Gigas002/Sweet-kde) `plasma-6-migration`
   (Plasma-6 fork of [EliverLara/Sweet](https://github.com/EliverLara/Sweet)). License CC BY-SA 4.0.
 

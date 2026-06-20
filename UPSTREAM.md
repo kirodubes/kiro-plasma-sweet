@@ -1,4 +1,4 @@
-# Upstream references — kiro-sweet
+# Upstream references — kiro-plasma-sweet
 
 Everything needed to refresh this theme from upstream in the future.
 
