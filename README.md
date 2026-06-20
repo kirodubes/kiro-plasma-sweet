@@ -32,11 +32,12 @@ Cursors fall back to `breeze_cursors` (Sweet cursors are not bundled).
 sudo pacman -S kiro-plasma-sweet
 ```
 
-Then open **System Settings → Appearance → Global Themes** and apply **Sweet**.
-For the login screen, set the SDDM theme to **Sweet** under **System Settings →
-Colors & Themes → Login Screen (SDDM)**. New users get the **Sweet** Kvantum theme
-for Qt apps automatically (shipped via `/etc/skel`); existing users can select it in
-**Kvantum Manager** if they already have a `~/.config/Kvantum/kvantum.kvconfig`.
+New users boot straight into the Sweet colour scheme and Aurorae window decoration —
+shipped as system defaults under `/etc/xdg`. To pull in every remaining layer (Plasma
+desktop theme, icons, SDDM), open **System Settings → Appearance → Global Themes** and
+apply **Sweet**. For the login screen, set the SDDM theme to **Sweet** under **System
+Settings → Colors & Themes → Login Screen (SDDM)**. The Sweet **Kvantum** selection for
+Qt apps is shipped separately by `kiro-dot-files`.
 
 ## Heritage
 

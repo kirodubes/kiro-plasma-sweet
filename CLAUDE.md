@@ -18,12 +18,16 @@ look — but wired to **Kiro's own `neo-candy-icons`**, not upstream candy-icons
 - Cursors are not bundled; `defaults` points cursorTheme at `breeze_cursors`.
 - `konsole/` and `cursors/` from upstream are intentionally **excluded** — Konsole is
   owned by `kiro-plasma-konsole`; upstream cursors are source-only.
-- Kvantum colours are automatic for **new** users: `etc/skel/.config/Kvantum/kvantum.kvconfig`
-  sets `theme=Sweet`. Kvantum reads theme selection only from the user's
-  `~/.config/Kvantum/` (it does NOT honor the `/etc/xdg` cascade), so skel is correct —
-  not `/etc/xdg`. The look-and-feel `defaults` sets `widgetStyle=kvantum-dark` to engage
-  the Kvantum engine; existing users with an old kvantum.kvconfig keep their selection.
-- Mixed delivery: theme payload → `/usr/share`, Kvantum selection → `/etc/skel`. PKGBUILD copies both `usr/` and `etc/`.
+- **Kvantum selection lives in `kiro-dot-files`, NOT here.** It was removed from this
+  package (`etc/skel/.config/Kvantum/kvantum.kvconfig`) because it conflicts with
+  `kiro-dot-files`, which owns `etc/skel/.config/`. Do **not** re-add it here. The
+  look-and-feel `defaults` still sets `widgetStyle=kvantum-dark` to engage the Kvantum engine.
+- **Default Sweet appearance for new users:** `etc/xdg/kdeglobals` (Sweet colour scheme +
+  `LookAndFeelPackage=Sweet` + titlebar contrast + WM colours) and `etc/xdg/kwinrc`
+  (`[org.kde.kdecoration2]` Aurorae Sweet). `/etc/xdg` is the system-default layer, so it
+  doesn't freeze user config and doesn't collide with `kiro-dot-files`' `etc/skel`. These
+  were captured from a live Plasma box via `kiro-plasma-system-settings/capture-plasma-config.sh`.
+- Mixed delivery: theme payload → `/usr/share`, default appearance → `/etc/xdg`. PKGBUILD copies both `usr/` and `etc/`.
 - **Refreshing upstream:** all source references (repo, branch, vendored commit
   `0feee61`, path mapping, exclusions, the edits to re-apply) are in
   [UPSTREAM.md](./UPSTREAM.md) — the single source of truth for where this came from.
