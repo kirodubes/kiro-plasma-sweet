@@ -1,5 +1,35 @@
 # Changelog
 
+## 2026.06.20 — rename theme identity to Kiro namespace (coexist with upstream Sweet)
+
+### What Changed
+- Renamed every shipped theme identity from the upstream `Sweet` name into a `Kiro-`
+  namespace so the package **coexists with the upstream Sweet theme** — a user can install
+  `sweet-kde-theme-git` alongside this without any pacman file conflict — and so System
+  Settings shows an honest **Kiro Sweet** label instead of plain "Sweet".
+- Internal identifiers (folder names, KPlugin `Id`, `__aurorae__svg__` token, `ColorScheme`,
+  Kvantum dir, SDDM `Theme-Id`, `.colors` filename) → hyphenated `Kiro-Sweet*`. The visible
+  Global Theme name is the spaced **Kiro Sweet** (look-and-feel `KPlugin.Name`).
+
+### Technical Details
+- Look-and-feel `Sweet` → `Kiro-Sweet`; desktoptheme `Sweet` → `Kiro-Sweet`; aurorae
+  `Sweet`/`Sweet-transparent` → `Kiro-Sweet`/`Kiro-Sweet-transparent` (incl. the `*rc`
+  config files); Kvantum `Sweet`/`Sweet-transparent-toolbar` → `Kiro-*` (incl. inner
+  `.kvconfig`/`.svg`); SDDM `Sweet` → `Kiro-Sweet`; `Sweet.colors` → `Kiro-Sweet.colors`.
+- Cross-references repointed to match: look-and-feel `contents/defaults`
+  (`ColorScheme`/`plasmarc name`/`__aurorae__svg__`/`KSplash Theme`) and the `/etc/xdg`
+  defaults (`LookAndFeelPackage=Kiro-Sweet`, kwinrc Aurorae). Icon theme stays `neo-candy-icons`.
+- Internal-only assets kept their upstream names (splash `sweetlogo.png`, svg `docname`) —
+  they live under the renamed dirs so there is no conflict surface.
+- PKGBUILD: dropped the upstream `conflicts=(sweet-*)` array (no longer needed — paths no
+  longer collide) and bumped `pkgrel`.
+
+### Files Modified
+- Renamed all theme dirs/files under `usr/share/{plasma,aurorae,color-schemes,Kvantum,sddm}` to `Kiro-Sweet*`
+- `usr/share/plasma/look-and-feel/Kiro-Sweet/contents/defaults`, `etc/xdg/kdeglobals`, `etc/xdg/kwinrc` — repointed
+- `README.md`, `CLAUDE.md` — Kiro Sweet naming + coexistence note
+- `../KIRO-PKG-BUILD-APPS/kiro-plasma-sweet/PKGBUILD` — drop upstream conflicts, bump pkgrel
+
 ## 2026.06.20 — ship Sweet as the default appearance via /etc/xdg
 
 ### What Changed

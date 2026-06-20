@@ -2,7 +2,7 @@
 widgetStyle=kvantum-dark
 
 [kdeglobals][General]
-ColorScheme=Sweet
+ColorScheme=Kiro-Sweet
 
 [kdeglobals][Icons]
 Theme=neo-candy-icons
@@ -11,11 +11,11 @@ Theme=neo-candy-icons
 cursorTheme=breeze_cursors
 
 [plasmarc][Theme]
-name=Sweet
+name=Kiro-Sweet
 
 [kwinrc][org.kde.kdecoration2]
 library=org.kde.kwin.aurorae
-theme=__aurorae__svg__Sweet-transparent
+theme=__aurorae__svg__Kiro-Sweet-transparent
 
 [KSplash]
-Theme=Sweet
+Theme=Kiro-Sweet

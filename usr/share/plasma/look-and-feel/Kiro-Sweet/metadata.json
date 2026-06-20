@@ -9,9 +9,9 @@
         ],
         "Category": "",
         "Description": "Sweet SDDM theme",
-        "Id": "Sweet",
+        "Id": "Kiro-Sweet",
         "License": "GPLv3+",
-        "Name": "Sweet",
+        "Name": "Kiro Sweet",
         "Website": "https://github.com/EliverLara/Sweet/tree/nova/kde"
     },
     "X-Plasma-API-Minimum-Version": "6.0"
