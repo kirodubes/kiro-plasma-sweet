@@ -21,7 +21,9 @@ look — but wired to **Kiro's own `neo-candy-icons`**, not upstream candy-icons
 - **Kvantum selection lives in `kiro-dot-files`, NOT here.** It was removed from this
   package (`etc/skel/.config/Kvantum/kvantum.kvconfig`) because it conflicts with
   `kiro-dot-files`, which owns `etc/skel/.config/`. Do **not** re-add it here. The
-  look-and-feel `defaults` still sets `widgetStyle=kvantum-dark` to engage the Kvantum engine.
+  look-and-feel `defaults` sets `widgetStyle=Breeze` — the application style is Breeze, not
+  Kvantum. (Kvantum theme payload still ships under `usr/share/Kvantum/` but is not the
+  active widget style by default.)
 - **Default Sweet appearance for new users:** `etc/xdg/kdeglobals` (Sweet colour scheme +
   `LookAndFeelPackage=Kiro-Sweet` + titlebar contrast + WM colours) and `etc/xdg/kwinrc`
   (`[org.kde.kdecoration2]` Aurorae Kiro-Sweet). `/etc/xdg` is the system-default layer, so it
