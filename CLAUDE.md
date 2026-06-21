@@ -15,7 +15,7 @@ look — but wired to **Kiro's own `neo-candy-icons`**, not upstream candy-icons
 ## Patterns / things to know
 - **Icons are deliberately ours.** `usr/share/plasma/look-and-feel/Kiro-Sweet/contents/defaults`
   sets `[kdeglobals][Icons] Theme=neo-candy-icons`. Do not revert to `candy-icons`.
-- Cursors are not bundled; `defaults` points cursorTheme at `breeze_cursors`.
+- Cursors are not bundled; `defaults` points cursorTheme at `Breeze_Light` (white Breeze).
 - `konsole/` and `cursors/` from upstream are intentionally **excluded** — Konsole is
   owned by `kiro-plasma-konsole`; upstream cursors are source-only.
 - **Kvantum selection lives in `kiro-dot-files`, NOT here.** It was removed from this

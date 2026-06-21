@@ -1,5 +1,28 @@
 # Changelog
 
+## 2026.06.21 — default cursor → Breeze Light (white) + explicit ColorScheme name
+
+### What Changed
+- Changed the default cursor theme from the dark `breeze_cursors` to the white
+  **Breeze Light** (`Breeze_Light`) so new users picking Kiro Sweet get the light cursor.
+- Added an explicit `[General] ColorScheme=Kiro-Sweet` to the system-default
+  `etc/xdg/kdeglobals` so the already-shipped Sweet colours name their scheme for all users.
+
+### Technical Details
+- Verified live on a Plasma box: changing the cursor in System Settings → Mouse → Cursors
+  writes `[Mouse] cursorTheme=Breeze_Light` to `~/.config/kcminputrc`, and selecting the
+  Kiro-Sweet colour scheme writes `[General] ColorScheme=Kiro-Sweet` to `~/.config/kdeglobals`
+  (captured via `kiro-plasma-system-settings/capture-plasma-config.sh` snapshot/diff). All
+  other colour values from the capture already matched what `etc/xdg/kdeglobals` ships.
+- The cursor default is delivered via the look-and-feel `defaults` file (`[kcminputrc][Mouse]`),
+  applied when the user selects the Kiro Sweet Global Theme. Cursors are still not bundled —
+  `Breeze_Light` ships with Plasma.
+
+### Files Modified
+- `usr/share/plasma/look-and-feel/Kiro-Sweet/contents/defaults` — `cursorTheme` → `Breeze_Light`
+- `etc/xdg/kdeglobals` — added `[General] ColorScheme=Kiro-Sweet`
+- `CLAUDE.md` — cursor note updated
+
 ## 2026.06.20 — rename theme identity to Kiro namespace (coexist with upstream Sweet)
 
 ### What Changed
