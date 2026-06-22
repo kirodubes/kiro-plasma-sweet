@@ -1,8 +1,12 @@
 # Changelog
 
-## 2026.06.21 — default cursor → Breeze Light (white) + explicit ColorScheme name
+## 2026.06.21 — application style → Breeze; default cursor → Breeze Light (white) + explicit ColorScheme name
 
 ### What Changed
+- Changed the default **application (widget) style** from `kvantum-dark` to **Breeze** in the
+  look-and-feel `defaults`, so new users picking Kiro Sweet get Breeze as the application style
+  instead of the Kvantum-rendered widgets. The Kvantum theme payload still ships under
+  `usr/share/Kvantum/` but is no longer the active widget style by default.
 - Changed the default cursor theme from the dark `breeze_cursors` to the white
   **Breeze Light** (`Breeze_Light`) so new users picking Kiro Sweet get the light cursor.
 - Added an explicit `[General] ColorScheme=Kiro-Sweet` to the system-default
@@ -19,9 +23,9 @@
   `Breeze_Light` ships with Plasma.
 
 ### Files Modified
-- `usr/share/plasma/look-and-feel/Kiro-Sweet/contents/defaults` — `cursorTheme` → `Breeze_Light`
+- `usr/share/plasma/look-and-feel/Kiro-Sweet/contents/defaults` — `widgetStyle` → `Breeze`, `cursorTheme` → `Breeze_Light`
 - `etc/xdg/kdeglobals` — added `[General] ColorScheme=Kiro-Sweet`
-- `CLAUDE.md` — cursor note updated
+- `CLAUDE.md` — cursor + widgetStyle notes updated
 
 ## 2026.06.20 — rename theme identity to Kiro namespace (coexist with upstream Sweet)
 
