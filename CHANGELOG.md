@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026.06.23 — Drop the default-theme selector (`/etc/xdg/kdeglobals`)
+
+### What Changed
+- Removed `etc/xdg/kdeglobals` (and the `etc/` copy from the PKGBUILD). This file made Sweet the
+  de-facto out-of-box default Plasma theme (`LookAndFeelPackage=Kiro-Sweet` + Sweet colours).
+- The single system-wide default-theme selector now lives in **kiro-plasma-system-settings**,
+  which sets the ISO default to **Kiro-Nordic**. Centralising it there is required because KIB
+  installs all theme packages together — two themes shipping `/etc/xdg/kdeglobals` would be a
+  pacman file conflict. Sweet now ships only its uniquely-named theme assets under `usr/`.
+- Sweet is still fully selectable in System Settings; it's just no longer the default.
+
+### Files Modified
+- `etc/xdg/kdeglobals` (removed)
+- `PKGBUILD` (recipe repo): `package()` no longer copies `etc/`
+
 ## 2026.06.21 — application style → Breeze; default cursor → Breeze Light (white) + explicit ColorScheme name
 
 ### What Changed

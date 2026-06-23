@@ -24,12 +24,13 @@ look — but wired to **Kiro's own `neo-candy-icons`**, not upstream candy-icons
   look-and-feel `defaults` sets `widgetStyle=Breeze` — the application style is Breeze, not
   Kvantum. (Kvantum theme payload still ships under `usr/share/Kvantum/` but is not the
   active widget style by default.)
-- **Default Sweet appearance for new users:** `etc/xdg/kdeglobals` (Sweet colour scheme +
-  `LookAndFeelPackage=Kiro-Sweet` + titlebar contrast + WM colours) and `etc/xdg/kwinrc`
-  (`[org.kde.kdecoration2]` Aurorae Kiro-Sweet). `/etc/xdg` is the system-default layer, so it
-  doesn't freeze user config and doesn't collide with `kiro-dot-files`' `etc/skel`. These
-  were captured from a live Plasma box via `kiro-plasma-system-settings/capture-plasma-config.sh`.
-- Mixed delivery: theme payload → `/usr/share`, default appearance → `/etc/xdg`. PKGBUILD copies both `usr/` and `etc/`.
+- **No default-theme selector here anymore (2026-06-23).** `etc/xdg/kdeglobals` was removed —
+  it used to make Sweet the de-facto out-of-box default (`LookAndFeelPackage=Kiro-Sweet` + Sweet
+  colours). The single system-wide default selector now lives in `kiro-plasma-system-settings`
+  (ISO default = Kiro-Nordic); it must be in exactly one always-installed package because KIB
+  installs all themes together and two `/etc/xdg/kdeglobals` files would be a pacman conflict.
+  Do **not** re-add it here. Sweet stays fully selectable in System Settings, just not default.
+- Delivery: theme payload → `/usr/share` only. PKGBUILD copies `usr/` (no `etc/`).
 - **Refreshing upstream:** all source references (repo, branch, vendored commit
   `0feee61`, path mapping, exclusions, the edits to re-apply) are in
   [UPSTREAM.md](./UPSTREAM.md) — the single source of truth for where this came from.
